@@ -1,0 +1,109 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    background: #b92b27;
+    background: -webkit-linear-gradient(to right, #b92b27, #1565c0);
+    background: linear-gradient(to right, #b92b27, #1565c0); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header h1 {
+    font-size: 45px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.input {
+    padding: 20px 30px;
+    width: 400px;
+    height: 80px;
+    font-size: 25px;
+    color: #eee;
+    background-color: #777;
+    border: none;
+    transition: all .4s ease;
+    font-weight: 600;
+}
+
+.input::placeholder {
+    color: #333;
+}
+
+.input:focus{
+    outline-color: #1565c0;
+    background-color: #555;
+}
+
+.todo-container {
+    min-width: 600px;
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.todo-list {
+    list-style: none;
+}
+
+.todo {
+    background-color: #c31432;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.todo:hover {
+    box-shadow: 0 5px 10px rgba(0,0,0, .2);
+}
+
+.todo.done {
+    opacity: .9;
+    text-decoration: line-through;
+    font-weight: bold;
+}
+
+.todo.rotate {
+    transform: rotateY(420deg) scale(.80);
+    opacity: .6;
+}
+
+.trash-btn {
+    text-align: center;
+    font-size: 25px;
+    padding: 8px 12px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.trash-btn:hover {
+    box-shadow: 0 0 5px rgba(0,0,0, .9);
+}
+
+.trash-btn span {
+    color: #fff;
+    pointer-events: none;
+}
