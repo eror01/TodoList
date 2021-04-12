@@ -18,18 +18,15 @@ function createTodo(){
     `;
     todo.appendChild(trashBtn);
     input.value = '';
-    updateLS();
 
     todo.addEventListener('click', () => {
         todo.classList.toggle('done');
-        updateLS();
     });
     trashBtn.addEventListener('click', () => {
         todo.classList.add('rotate');
         setTimeout(() => {
             todo.remove();
         }, 500)
-        updateLS();
     });
 }
 
